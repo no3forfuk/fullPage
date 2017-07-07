@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>fullPage</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul,
+    ol {
+        list-style: none;
+    }
+    
+    
+    ol {
+        position: fixed;
+        top: 50px;
+        left: 50px;
+    }
+    
+    ol li {
+    	/* ol&li样式要自己写 */
+        width: 50px;
+        height: 50px;
+        border: 1px solid #000;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+    }
+    </style>
+</head>
+
+<body>
+	<div class="eg">
+		<!-- 必须有一个容器  名字可选 -->
+		    <ul id="fullPageUl">
+		    <!-- ul为target  -->
+		        <li>1</li>
+		        <li>2</li>
+		        <li>3</li>
+		        <li>4</li>
+		        <li>5</li>
+		       
+		    </ul>
+	    </div>
+    <script src="./fullPage.js"></script>
+    <script>
+    var s = fullPage({
+    	colors:["#abcdef", "#f60", "#ccc520", "pink", "skyblue"],//可选
+    	target:'#fullPageUl',//必填 （css选择器）
+    	container:'.eg',//必填（css选择器）
+    	isVertical:false //true is vertical // false is not vertical  
+    });
+    console.log(s)
+    </script>
+</body>
+
+</html>
